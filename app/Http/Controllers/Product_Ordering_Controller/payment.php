@@ -13,38 +13,36 @@ namespace App\Http\Controllers\Product_Ordering_Controller;
     use App\Models\Transaction;
     use Illuminate\Support\Facades\Auth;
     use Softon\Indipay\Facades\Indipay;
-     
     use Mail;
-
-    
-
 
     class payment extends Controller
     {
-        public function proceed_to_Payment(Request $request,$id)
+        public function proceed_to_Payment(Request $request, $id)
         {
-            $Order=Order::where('id','=',$id)->first();
-         
-           $amount=$Order->Amount;
-            // $amount=5;
-            $email=$Order->Customer_Emailid ; 
-            $id=$Order->id;
-           
+            $Order = Order::where('id','=',$id)->first();
+            $amount = $Order->Amount;
+            $email = $Order->Customer_Emailid; 
+            $id = $Order->id;
             
             $parameters = [
-                'txnid' => substr(hash('sha256', mt_rand() . microtime()), 0, 20) ,
+                'key' => '7WbVj3',
+                'txnid' => substr(hash('sha256', mt_rand() . microtime()), 0, 20),
+                'productinfo' => 'Super Power - 2 (Porridge Mix)',
                 'amount' => $amount,
-                'email' => $email,   
-                'udf1'=> $id,                   
-                'phone' => '22',
-                'firstname'=> 'd',
-                'productinfo' => 'sd',
-                'key'=>'7IzrZbv0',
-                'service_provider'=>'payu_paisa',
-                'curl'=>url('payu/response')
-                
+                'email' => $email,
+                'firstname' => 'vas',
+                'lastname' => 'das',                   
+                'phone' => '91',
+                'surl' => url('payumoney/response'),
+                'furl' => url('payumoney/response'),
+                'udf1'=> $id, 
+                //'service_provider'=>'payu_paisa',                
             ];
+            $text = $parameters['key'].'|'.$parameters['txnid'].'|'.$parameters['amount'].'|'.$parameters['productinfo'].'|'.$parameters['firstname'].'|'.$parameters['email'].'|'.$parameters['udf1'].'|||||gjLkXOSvVZMgpHyFOpEODQpWzebmp4YI';
+            $hashOutput = hash("sha512", $text);
+            $parameters['hash'] = $hashOutput;
             $order = Indipay::prepare($parameters);
+
             return Indipay::process($order);
         }
 
@@ -58,14 +56,12 @@ namespace App\Http\Controllers\Product_Ordering_Controller;
                 $email=$response["email"];             
                 $txnid=$response["txnid"];
                 $Order=Order::find($O_id)->first();
-                 $Order_Details=$Order->Order_Details;
+                $Order_Details=$Order->Order_Details;
                 $Delivery_Address=$Order->Delivery_Address;
-             $p_method=$Order->paymentmode;
-            $Amount=$Order->Amount;
+                $p_method=$Order->paymentmode;
+                $Amount=$Order->Amount;
                 if($status=="success" && $unmappedstatus=='captured')
                 {
-                       
-                   
                     $Order->p_status="success";
                     $Order->p_status_Updated_By="Automatic";
                     $Order->update();

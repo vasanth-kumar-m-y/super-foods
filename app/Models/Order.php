@@ -16,10 +16,5 @@ class Order extends Model
         'p_status',
         'p_status_Updated_By',
         'Coupen_Code',
-              
-              
-        
-
-
     ];
 }

@@ -26,9 +26,10 @@ return [
         'language' => env('INDIPAY_LANGUAGE', 'EN'),
     ],
 
-    'payumoney' => [                         // PayUMoney Parameters
-        'merchantKey'  => env('INDIPAY_MERCHANT_KEY', '7IzrZbv0'), //add merchat key
-        'salt'  => env('INDIPAY_SALT', 'meXcHnA28e'), //add salt key
+    // PayUMoney Parameters
+    'payumoney' => [                         
+        'merchantKey'  => env('INDIPAY_MERCHANT_KEY', '7WbVj3'), //add merchat key
+        'salt'  => env('INDIPAY_SALT', 'gjLkXOSvVZMgpHyFOpEODQpWzebmp4YI'), //add salt key
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function

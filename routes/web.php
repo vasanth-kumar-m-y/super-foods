@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
- Route::post('subscribe-news-letter','UserController@subscribe');
+Route::post('subscribe-news-letter','UserController@subscribe');
  
- Route::post('send-email','UserController@send_email');
+Route::post('send-email','UserController@send_email');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -58,14 +58,14 @@ Route::get('/Shop/{purl}', 'Product_Ordering_Controller\FrontEndController@index
 
 Route::get('/user/dashboard', 'UserController@index')->middleware('auth');
 
-    Route::get('/dashboard', 'UserController@index')->middleware('auth');
-    Route::get('/profile', 'UserController@open_profile')->middleware('auth');
-    
-    Route::post('/my-profile-update', 'UserController@update')->middleware('auth');
-    Route::post('/update-password', 'UserController@updatepassword')->middleware('auth');
-    
-    Route::get('/Orders', 'UserController@open_orders')->middleware('auth');
-    Route::get('/Payments', 'UserController@open_transactions')->middleware('auth');
+Route::get('/dashboard', 'UserController@index')->middleware('auth');
+Route::get('/profile', 'UserController@open_profile')->middleware('auth');
+
+Route::post('/my-profile-update', 'UserController@update')->middleware('auth');
+Route::post('/update-password', 'UserController@updatepassword')->middleware('auth');
+
+Route::get('/Orders', 'UserController@open_orders')->middleware('auth');
+Route::get('/Payments', 'UserController@open_transactions')->middleware('auth');
     
 Route::get('/Order-Status/{id}', 'Order_Status_Controller@Order_Status')->middleware('auth');
 
@@ -107,19 +107,19 @@ Route::group(['middleware'=>['auth','isAdmin']],function ()
     Route::get('admin-product-delete-confirm/{id}','Admin\ProductController@confirmdelete');
     Route::get('admin-Orders','Admin\LinksController@showorders');
     Route::get('admin-Transactions','Admin\LinksController@showTransactions');
-       Route::get('admin-news-letter','Admin\LinksController@showNewsLetter');
+    Route::get('admin-news-letter','Admin\LinksController@showNewsLetter');
        
-Route::get('admin-Order-Status/{id}', 'Admin\Order_Status_Controller@Order_Status');
-  Route::post('admin-Update-Shipping-Status','Admin\Order_Status_Controller@Update_Shipping_Status');
-  Route::post('admin-Update-Delivery-Status','Admin\Order_Status_Controller@Update_Delivery_Status');
-  
-  Route::post('admin-Update-Payment-Status','Admin\Order_Status_Controller@Update_Payment_Status');
+    Route::get('admin-Order-Status/{id}', 'Admin\Order_Status_Controller@Order_Status');
+    Route::post('admin-Update-Shipping-Status','Admin\Order_Status_Controller@Update_Shipping_Status');
+    Route::post('admin-Update-Delivery-Status','Admin\Order_Status_Controller@Update_Delivery_Status');
+    
+    Route::post('admin-Update-Payment-Status','Admin\Order_Status_Controller@Update_Payment_Status');
 
-  Route::post('admin-Update-paymentmode-Status','Admin\Order_Status_Controller@Update_paymentmode_Status');
- 
-Route::get('admin-Order-Cancel/{id}', 'Admin\Order_Status_Controller@Order_Cancel');
+    Route::post('admin-Update-paymentmode-Status','Admin\Order_Status_Controller@Update_paymentmode_Status');
+    
+    Route::get('admin-Order-Cancel/{id}', 'Admin\Order_Status_Controller@Order_Cancel');
 
-Route::get('admin-Order-Re-Cancel/{id}', 'Admin\Order_Status_Controller@Order_Re_Cancel');
+    Route::get('admin-Order-Re-Cancel/{id}', 'Admin\Order_Status_Controller@Order_Re_Cancel');
     
 });
 
@@ -174,6 +174,7 @@ Route::get('proceed_to_Payment/{O_Id}','Product_Ordering_Controller\payment@proc
 Route::post("/payumoney/response","Product_Ordering_Controller\payment@payumoneyResponse")->middleware('auth');
 
 Route::post("/payu/response","Product_Ordering_Controller\payment@payumoneyResponse")->middleware('auth');
+
 /* The Below 2 routes are only for to handle unwanted access */
 Route::get('/payumoney/response', function () {
     return view('welcome');
