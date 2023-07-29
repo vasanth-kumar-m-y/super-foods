@@ -173,7 +173,7 @@ class ProductController extends Controller
     }
     public function deleteproduct(Request $request, $id)
     {
-        $Products=Products::find($id);
+        $Products = Products::find($id);
  
         $Products->status = 2;
 
@@ -186,7 +186,7 @@ class ProductController extends Controller
     }
     public function restore(Request $request, $id)
     {
-        $Products=Products::find($id);
+        $Products = Products::find($id);
  
         $Products->status = 1;
 

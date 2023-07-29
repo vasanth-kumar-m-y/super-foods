@@ -29,13 +29,13 @@ class Order_Status_Controller extends Controller
     
      public function Update_Shipping_Status(Request $request)
      {
-        $id=$request->input('Order_id') ;
-        $Orders=Order::find($id);
+        $id = $request->input('Order_id') ;
+        $Orders = Order::find($id);
         $Shipping_Status = $request->input('Shipping_Status');
-        $Orders->Shipping_Status=$Shipping_Status;
+        $Orders->Shipping_Status = $Shipping_Status;
         #$Auth = Auth::user();
 
-        #$Orders->D_Status_Updated_By=$Auth->email;
+        #$Orders->D_Status_Updated_By = $Auth->email;
         $Orders->update();
         
         /* Email Alert Starts Here*/
@@ -128,10 +128,10 @@ class Order_Status_Controller extends Controller
         $id = $request->input('Order_id') ;
         $Orders = Order::find($id);
         $p_status = $request->input('p_status');
-        $Orders->p_status=$p_status;
+        $Orders->p_status = $p_status;
         $Auth = Auth::user();
 
-        $Orders->p_status_Updated_By=$Auth->email;
+        $Orders->p_status_Updated_By = $Auth->email;
         $Orders->update();
         return redirect()->back()->with('status','Payment  Status Updated Succesfully');
     }
@@ -141,7 +141,7 @@ class Order_Status_Controller extends Controller
         $id = $request->input('Order_id') ;
         $Orders = Order::find($id);
         $paymentmode = $request->input('paymentmode');
-        $Orders->paymentmode=$paymentmode;
+        $Orders->paymentmode = $paymentmode;
         #$Auth = Auth::user();
 
         #$Orders->D_Status_Updated_By=$Auth->email;
@@ -208,7 +208,7 @@ class Order_Status_Controller extends Controller
         $Orders->Order_Cancel_Status=0;
         $Orders->Order_Cancelled_On=NULL;
         
-        #  $Auth = Auth::user();
+        # $Auth = Auth::user();
 
         # $Orders->D_Status_Updated_By=$Auth->email;
         $Orders->update();

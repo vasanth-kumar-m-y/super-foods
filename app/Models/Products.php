@@ -23,9 +23,5 @@ class Products extends Model
         'keywords',
         'meta_description',
         'status',
-        
-        
-
-
     ];
 }

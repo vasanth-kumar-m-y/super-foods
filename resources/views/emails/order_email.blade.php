@@ -86,7 +86,7 @@
                                     <td align="right" width="25%">
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
-                                                <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                                                <!-- <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
                                                     <a href="https://twitter.com/codetalentum" style="color: #ffffff;">
                                                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
                                                     </a>
@@ -96,7 +96,29 @@
                                                     <a href="https://www.facebook.com/CodeTalentum" style="color: #ffffff;">
                                                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
                                                     </a>
-                                                </td>
+                                                </td> -->
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">
+                                                    <a href="https://www.facebook.com/SuperFoodsSuperLiving/about/?ref=page_internal" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                    </li>
+                                                    <li  class="list-inline-item">
+                                                    <a href="https://www.youtube.com/channel/UC6gob5NKFhCl3AmsdPxJ1uA" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
+                                                        <i class="fab fa-youtube"></i>
+                                                    </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                    <a href="https://www.instagram.com/superfoods4superliving/" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                    <a href="https://in.linkedin.com/company/super-foods" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
+                                                        <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                    </li>
+                                                </ul>
                                             </tr>
                                         </table>
                                     </td>

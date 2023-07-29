@@ -25,13 +25,16 @@ class payment extends Controller
         $amount = $Order->Amount;
         $email = $Order->Customer_Emailid; 
         $id = $Order->id;
+        $User = User::where('email','=',$email)->first();
+        preg_match('/:(.*), (.*)/', $Order->Order_Details, $matches);
+        $productinfo = str_replace([' ', '(', ')'], '', $matches[1]);
         
         $parameters = [
-            'productinfo' => 'Super_power',
+            'productinfo' => $productinfo,
             'amount' => $amount,
             'email' => $email,
-            'firstname' => 'vas',
-            'phone' => '91',
+            'firstname' => $User->name,
+            'phone' => $User->mnumber,
             'udf1' => $id
         ];
         $order = Indipay::prepare($parameters);
@@ -48,7 +51,7 @@ class payment extends Controller
         $O_id = $response["udf1"];
         $email = $response["email"];             
         $txnid = $response["txnid"];
-        $Order = Order::find($O_id)->first();
+        $Order = Order::find($O_id);
         $Order_Details = $Order->Order_Details;
         $Delivery_Address = $Order->Delivery_Address;
         $p_method = $Order->paymentmode;
@@ -59,7 +62,9 @@ class payment extends Controller
             $Order->p_status = "success";
             $Order->p_status_Updated_By = "Automatic";
             $Order->update();
+
             $email = $Order->Customer_Emailid;      
+
             $Transaction = new Transaction();
             $Transaction->TXNID = $txnid;
             $Transaction->Oder_No = $O_id;
@@ -68,7 +73,7 @@ class payment extends Controller
             $Transaction->status = $status;
             $Transaction->save();
                     
-            $User=User::where('email','=',$email)->first();
+            $User = User::where('email','=',$email)->first();
             $loginid = $email;
             $name = $User->name;
             //You Paid amount of  '.$amount.' INR  for the following Order
@@ -103,7 +108,7 @@ class payment extends Controller
             return redirect("/Orders")->with('status','You Paid Succesfully');  
         } else {
             $Order = Order::find($O_id)->first();
-            $email=$Order->Customer_Emailid; 
+            $email = $Order->Customer_Emailid; 
             $Transaction = new Transaction();
             $Transaction->TXNID = $txnid;
             $Transaction->Oder_No = $O_id;
