@@ -71,7 +71,7 @@ class Order_Status_Controller extends Controller
         	                    {
         	                        $message->to($loginid, $name)->subject
         	                        ('Hey'.$name.' Your  Order No: '.$id.' Was Cancelled Succesfully');
-        	                        $message->from('codetalentum@btao.in','CodeTalentum');
+        	                        $message->from('vasanthaws28@gmail.com','CodeTalentum');
         	                        
         	                    });
            /* Email Alert Ends Here*/

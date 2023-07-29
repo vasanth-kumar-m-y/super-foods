@@ -4,7 +4,7 @@
 
 ## Ecommerce Website using Laravel 5.8 
 
-Gainaloe is my first e-commerce platform developed for the client, Really it was a great experience for me I have learned a lot from this project.
+SuperFoods is my first e-commerce platform developed for the client, Really it was a great experience for me I have learned a lot from this project.
 ## Features
 - User-Friendly
 - Mobile-Friendly Website

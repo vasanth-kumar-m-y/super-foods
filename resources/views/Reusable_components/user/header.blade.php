@@ -2,7 +2,7 @@
     
 @media (min-width: 768px)
 {
-     #Gainaloe_Logo
+     #SuperFoods_Logo
     {
         margin-left:-75px;
     }
@@ -36,7 +36,7 @@ $(document).ready(function (){
     <header id="header" class="z-depth-1"  style="position:fixed;top:0px;width:100%;font-family: 'Balsamiq Sans', cursive;">
         <div class="container d-flex" >
     
-          <div id="Gainaloe_Logo" class="logo mr-auto" >
+          <div id="SuperFoods_Logo" class="logo mr-auto" >
             <!--  <h1 class="text-light"><a href="/">CompanYName</a></h1>  -->
             <a href="/" ><img src=" {{asset('assets/img/Logo.webp')}}" alt="" class="img-fluid" ></a>
             
