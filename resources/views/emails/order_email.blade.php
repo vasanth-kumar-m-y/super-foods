@@ -86,43 +86,29 @@
                                     <td align="right" width="25%">
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
-                                                <td>
-                                                    <div class="text-center text-md-right">
-                                                        <ul class="list-unstyled list-inline">
-                                                            <li class="list-inline-item">
-                                                            <a href="https://www.facebook.com/SuperFoodsSuperLiving/about/?ref=page_internal" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
-                                                                <i class="fab fa-facebook-f"></i>
-                                                            </a>
-                                                            </li>
-                                                            <li  class="list-inline-item">
-                                                            <a href="https://www.youtube.com/channel/UC6gob5NKFhCl3AmsdPxJ1uA" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
-                                                                <i class="fab fa-youtube"></i>
-                                                            </a>
-                                                            </li>
-                                                            <li class="list-inline-item">
-                                                            <a href="https://www.instagram.com/superfoods4superliving/" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
-                                                                <i class="fab fa-instagram"></i>
-                                                            </a>
-                                                            </li>
-                                                            <li class="list-inline-item">
-                                                            <a href="https://in.linkedin.com/company/super-foods" class="btn-floating btn-sm rgba-white-slight mx-1" target="_blank">
-                                                                <i class="fab fa-linkedin-in"></i>
-                                                            </a>
-                                                            </li>
-                                                        </ul>
-                                                     </div>
-                                                </td>
-                                                <!-- <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-                                                    <a href="https://twitter.com/codetalentum" style="color: #ffffff;">
-                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
+                                                <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                                                    <a href="https://www.facebook.com/SuperFoodsSuperLiving/about/?ref=page_internal" style="color: #ffffff;">
+                                                        <img src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new" width="38" height="38" style="display: block;" border="0" />
                                                     </a>
                                                 </td>
                                                 <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
                                                 <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-                                                    <a href="https://www.facebook.com/CodeTalentum" style="color: #ffffff;">
-                                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+                                                    <a href="https://www.youtube.com/channel/UC6gob5NKFhCl3AmsdPxJ1uA" style="color: #ffffff;">
+                                                        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play" width="38" height="38" style="display: block;" border="0" />
                                                     </a>
-                                                </td> -->
+                                                </td>
+                                                <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                                                <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                                                    <a href="https://www.instagram.com/superfoods4superliving/" style="color: #ffffff;">
+                                                        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1" width="38" height="38" style="display: block;" border="0" />
+                                                    </a>
+                                                </td>
+                                                <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                                                <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
+                                                    <a href="https://in.linkedin.com/company/super-foods" style="color: #ffffff;">
+                                                        <img src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin" width="38" height="38" style="display: block;" border="0" />
+                                                    </a>
+                                                </td>
                                             </tr>
                                         </table>
                                     </td>
